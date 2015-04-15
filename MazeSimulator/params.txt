@@ -1,0 +1,10 @@
+Threshold .2
+WeightRange 3
+NumberofThreads 8
+SubstrateActivationFunction SteepenedSigmoidApproximation
+StartActivationFunctions
+BipolarSigmoid .25
+Gaussian .25
+Linear .25
+Sine .25
+EndActivationFunctions

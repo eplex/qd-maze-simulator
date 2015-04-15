@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{209E3086-B9F5-4D08-9538-D88E3A2378A4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MazeSimulator</RootNamespace>
+    <AssemblyName>MazeSimulator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AgentBrain.cs" />
+    <Compile Include="BasicShapes.cs" />
+    <Compile Include="Behavior Characterizations\BehaviorCharacterizationFactory.cs" />
+    <Compile Include="Behavior Characterizations\DirectionBC.cs" />
+    <Compile Include="Behavior Characterizations\EndPointBC.cs" />
+    <Compile Include="Behavior Characterizations\HalfTrajectoryBC.cs" />
+    <Compile Include="Behavior Characterizations\IBehaviorCharacterization.cs" />
+    <Compile Include="Behavior Characterizations\FullTrajectoryBC.cs" />
+    <Compile Include="EngineUtilities.cs" />
+    <Compile Include="Environment.cs" />
+    <Compile Include="Experiment.cs" />
+    <Compile Include="Experiments\MultiAgentExperiment.cs" />
+    <Compile Include="Experiments\SimulatorExperiment.cs" />
+    <Compile Include="Experiments\SimulatorExperimentInterface.cs" />
+    <Compile Include="ExperimentWrapper.cs" />
+    <Compile Include="Fitness Functions\DiverseQualityMazeFitness.cs" />
+    <Compile Include="Fitness Functions\FitnessFunctionFactory.cs" />
+    <Compile Include="Fitness Functions\IFitnessFunction.cs" />
+    <Compile Include="Forms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AgentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommunicationVisualizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CommunicationVisualizer.designer.cs">
+      <DependentUpon>CommunicationVisualizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GenomeVisualizerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GenomeVisualizerForm.designer.cs">
+      <DependentUpon>GenomeVisualizerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HelpForm.designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NetworkDifferencesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NetworkDifferencesForm.designer.cs">
+      <DependentUpon>NetworkDifferencesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NetworkVisualizerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewExperimentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewExperimentForm.designer.cs">
+      <DependentUpon>NewExperimentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ObjectRenamer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ObjectRenamer.Designer.cs" />
+    <Compile Include="Forms\ReadmeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReadmeForm.Designer.cs" />
+    <Compile Include="Forms\RoboModelSetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RoboModelSetter.Designer.cs" />
+    <Compile Include="Forms\SensorInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsDialog.Designer.cs" />
+    <Compile Include="Forms\TeamVisualizerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeamVisualizerForm.Designer.cs" />
+    <Compile Include="Forms\WallAdder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WallAdder.Designer.cs" />
+    <Compile Include="HyperNEATEvolver.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="NetworkEvaluator.cs" />
+    <Compile Include="Robot Models\HardMazeRobotModel.cs" />
+    <Compile Include="Robot Models\Robot.cs" />
+    <Compile Include="Robot Models\Sensors\ISensor.cs" />
+    <Compile Include="Robot Models\Sensors\RangeFinder.cs" />
+    <Compile Include="RobotModelFactory.cs" />
+    <Compile Include="SimulatorObject.cs" />
+    <Compile Include="SimulatorVisualizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimulatorVisualizer.designer.cs">
+      <DependentUpon>SimulatorVisualizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StandardCollision.cs" />
+    <Compile Include="Wall.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Dropbox\nsf\SharpNeatLib\SharpNeatLib.csproj">
+      <Project>{3A64602B-C5E0-4CB7-99B0-1FC6ABB4449A}</Project>
+      <Name>SharpNeatLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AgentInfo.resx">
+      <DependentUpon>AgentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CommunicationVisualizer.resx">
+      <DependentUpon>CommunicationVisualizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GenomeVisualizerForm.resx">
+      <DependentUpon>GenomeVisualizerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NetworkDifferencesForm.resx">
+      <DependentUpon>NetworkDifferencesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NetworkVisualizerForm.resx">
+      <DependentUpon>NetworkVisualizerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewExperimentForm.resx">
+      <DependentUpon>NewExperimentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ObjectRenamer.resx" />
+    <EmbeddedResource Include="Forms\ReadmeForm.resx" />
+    <EmbeddedResource Include="Forms\RoboModelSetter.resx" />
+    <EmbeddedResource Include="Forms\SensorInfo.resx" />
+    <EmbeddedResource Include="Forms\SettingsDialog.resx" />
+    <EmbeddedResource Include="Forms\WallAdder.resx" />
+    <EmbeddedResource Include="SimulatorVisualizer.resx">
+      <DependentUpon>SimulatorVisualizer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="QDMaze.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HardMazeSubstrate.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="params.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="QDExperiment.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

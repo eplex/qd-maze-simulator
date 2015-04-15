@@ -1,0 +1,24 @@
+<substrate leo="false" multiplane="true">
+<neuronGroups>
+<group id="0" plane="0" type="Input" startx="-1" starty="0" endx="1" endy="0" dx="6" dy="1"/> <!-- In: Rangefinder Sensors -->
+<group id="1" plane="1" type="Input" startx="0" starty="1" endx="0" endy="1" dx="1" dy="1"/> <!-- In: Radar Sensors (FRONT) -->
+<group id="2" plane="1" type="Input" startx="1" starty="0" endx="1" endy="0" dx="1" dy="1"/> <!-- In: Radar Sensors (RIGHT) -->
+<group id="3" plane="1" type="Input" startx="0" starty="-1" endx="0" endy="-1" dx="1" dy="1"/> <!-- In: Radar Sensors (BACK) -->
+<group id="4" plane="1" type="Input" startx="-1" starty="0" endx="-1" endy="0" dx="1" dy="1"/> <!-- In: Radar Sensors (LEFT) -->
+<group id="5" plane="2" type="Output" startx="0" starty="0" endx="0" endy="0" dx="1" dy="1"/> <!-- Out: Left/Right -->
+<group id="6" plane="3" type="Output" startx="0" starty="0" endx="0" endy="0" dx="1" dy="1"/> <!-- Out: Forward/Back -->
+</neuronGroups>
+<connections>
+<!-- Inputs fully connect to the outputs (sandwich network) -->
+<connection src-id="0" tg-id="5" type="fully-connected"/>
+<connection src-id="0" tg-id="6" type="fully-connected"/>
+<connection src-id="1" tg-id="5" type="fully-connected"/>
+<connection src-id="1" tg-id="6" type="fully-connected"/>
+<connection src-id="2" tg-id="5" type="fully-connected"/>
+<connection src-id="2" tg-id="6" type="fully-connected"/>
+<connection src-id="3" tg-id="5" type="fully-connected"/>
+<connection src-id="3" tg-id="6" type="fully-connected"/>
+<connection src-id="4" tg-id="5" type="fully-connected"/>
+<connection src-id="4" tg-id="6" type="fully-connected"/>
+</connections>
+</substrate>

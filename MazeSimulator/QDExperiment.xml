@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExperimentWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MultiAgentExperiment>
+    <gridCollision>false</gridCollision>
+    <neatBrain>true</neatBrain>
+    <homogeneousTeam>true</homogeneousTeam>
+    <multibrain>false</multibrain>
+<substrateDescriptionFilename>HardMazeSubstrate.xml</substrateDescriptionFilename>
+    <multiobjective>false</multiobjective>
+    <evolveSubstrate>false</evolveSubstrate>
+    <adaptableANN>false</adaptableANN>
+    <modulatoryANN>false</modulatoryANN>
+    <normalizeWeights>true</normalizeWeights>
+    <populationSize>64</populationSize>
+    <headingNoise>0</headingNoise>
+    <effectorNoise>0</effectorNoise>
+    <sensorNoise>0</sensorNoise>
+    <timesToRunEnvironments>1</timesToRunEnvironments>
+    <evaluationTime>800</evaluationTime>
+    <timestep>1</timestep>
+    <explanatoryText>Single agent hard maze</explanatoryText>
+    <scriptFile />
+    <robotModelName>HardMazeRobotModel</robotModelName>
+    <fitnessFunctionName>DiverseQualityMazeFitness</fitnessFunctionName>    <behaviorCharacterizationName>DirectionBC</behaviorCharacterizationName>
+    <environmentName>QDMaze.xml</environmentName>
+    <overrideDefaultSensorDensity>false</overrideDefaultSensorDensity>
+    <sensorDensity>5</sensorDensity>
+    <overrideTeamFormation>true</overrideTeamFormation>
+    <group_orientation>0</group_orientation>
+    <group_spacing>0</group_spacing>
+    <robot_heading>90</robot_heading>
+    <useScript>false</useScript>
+    <collisionPenalty>false</collisionPenalty>
+    <multipleEnvironments>false</multipleEnvironments>
+    <modulatory>false</modulatory>
+    <benchmark>false</benchmark>
+    <numberRobots>1</numberRobots>
+    <agentsVisible>false</agentsVisible>
+    <agentsCollide>false</agentsCollide>
+  </MultiAgentExperiment>
+</ExperimentWrapper>
